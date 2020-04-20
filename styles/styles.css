@@ -70,7 +70,6 @@ small,
 header,
 section,
 footer {
-  /* margin: 0 auto var(--section-margin) auto; */
   margin-bottom: var(--section-margin);
   padding: 0 5em;
 }
@@ -94,6 +93,16 @@ footer {
 .metric-down {
   color: hsl(356, 69%, 56%);
   font-weight: bold;
+}
+
+@media (max-width: 650px) {
+
+  header,
+  section,
+  footer {
+    margin-bottom: var(--section-margin);
+    padding: 0 2em;
+  }
 }
 
 /******************************
@@ -136,8 +145,9 @@ header {
 }
 
 @media (max-width: 650px) {
-  .header>h4 {
+  .header>h3 {
     flex: 1 0 100%;
+    font-size: 1.563em;
   }
 
   .header>p {
@@ -294,6 +304,11 @@ body.dark>.main-grid>.overview__title {
   color: white;
 }
 
+@media (max-width: 650px) {
+  .overview__title {
+    font-size: 1.563em;
+  }
+}
 
 /******************************
 *          ATTRIBUTION        *
