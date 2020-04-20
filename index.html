@@ -15,13 +15,19 @@
     <title>Frontend Mentor | Social media dashboard with theme switcher</title>
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/slider.css" />
   </head>
-  <body class="dark">
+  <body class="light">
     <header class="header">
-      <h4>Social Media Dashboard</h4>
-      <p class="header__slider">
-        <button>Dark Mode</button>
-      </p>
+      <h3>Social Media Dashboard</h3>
+      <div class="header__slider">
+        <p>Dark mode</p>
+        <label class="switch">
+          <input id="theme-switch" type="checkbox" />
+          <span class="slider round"></span>
+        </label>
+      </div>
+
       <p>Total Followers: 23,004</p>
     </header>
 
@@ -75,14 +81,14 @@
         </p>
       </div>
 
-      <h4 class="overview__title">Overview - Today</h4>
+      <h3 class="overview__title">Overview - Today</h3>
 
       <div class="overview--item">
         <p class="overview__metric">Page Views</p>
         <p class="overview__media-icon">
           <img src="./images/icon-facebook.svg" alt="Facebook" />
         </p>
-        <h4 class="overview__measurement">87</h4>
+        <h3 class="overview__measurement">87</h3>
         <p class="overview__percent metric-up">
           <img src="./images/icon-up.svg" alt="Up" />
           3%
@@ -93,7 +99,7 @@
         <p class="overview__media-icon">
           <img src="./images/icon-facebook.svg" alt="Facebook" />
         </p>
-        <h4 class="overview__measurement">52</h4>
+        <h3 class="overview__measurement">52</h3>
         <p class="overview__percent metric-down">
           <img src="./images/icon-down.svg" alt="Down" />
           2%
@@ -104,7 +110,7 @@
         <p class="overview__media-icon">
           <img src="./images/icon-instagram.svg" alt="Instagram" />
         </p>
-        <h4 class="overview__measurement">5462</h4>
+        <h3 class="overview__measurement">5462</h3>
         <p class="overview__percent metric-up">
           <img src="./images/icon-up.svg" alt="Up" />
           2257%
@@ -115,7 +121,7 @@
         <p class="overview__media-icon">
           <img src="./images/icon-instagram.svg" alt="Instagram" />
         </p>
-        <h4 class="overview__measurement">52k</h4>
+        <h3 class="overview__measurement">52k</h3>
         <p class="overview__percent metric-up">
           <img src="./images/icon-up.svg" alt="Up" />
           1375%
@@ -126,7 +132,7 @@
         <p class="overview__media-icon">
           <img src="./images/icon-twitter.svg" alt="Twitter" />
         </p>
-        <h4 class="overview__measurement">117</h4>
+        <h3 class="overview__measurement">117</h3>
         <p class="overview__percent metric-up">
           <img src="./images/icon-up.svg" alt="Up" />
           303%
@@ -137,7 +143,7 @@
         <p class="overview__media-icon">
           <img src="./images/icon-twitter.svg" alt="Twitter" />
         </p>
-        <h4 class="overview__measurement">507</h4>
+        <h3 class="overview__measurement">507</h3>
         <p class="overview__percent metric-up">
           <img src="./images/icon-up.svg" alt="Up" />
           553%
@@ -148,7 +154,7 @@
         <p class="overview__media-icon">
           <img src="./images/icon-youtube.svg" alt="Youtube" />
         </p>
-        <h4 class="overview__measurement">107</h4>
+        <h3 class="overview__measurement">107</h3>
         <p class="overview__percent metric-down">
           <img src="./images/icon-down.svg" alt="Down" />
           19%
@@ -159,7 +165,7 @@
         <p class="overview__media-icon">
           <img src="./images/icon-youtube.svg" alt="Youtube" />
         </p>
-        <h4 class="overview__measurement">1407</h4>
+        <h3 class="overview__measurement">1407</h3>
         <p class="overview__percent metric-down">
           <img src="./images/icon-down.svg" alt="Down" />
           12%
@@ -179,3 +185,4 @@
     </footer>
   </body>
 </html>
+<script src="/scripts/themeSwitcher.js"></script>
