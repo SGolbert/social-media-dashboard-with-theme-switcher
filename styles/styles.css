@@ -6,6 +6,7 @@
 
 .dark {
   --card-background: hsl(228, 28%, 20%);
+  --card-background-highlight: hsl(228, 28%, 30%);
   --main-background: hsl(230, 17%, 14%);
   --main-font: white;
   --secondary-font: hsl(228, 34%, 66%);
@@ -13,6 +14,7 @@
 
 .light {
   --card-background: hsl(227, 47%, 96%);
+  --card-background-highlight: hsl(227, 47%, 91%);
   --main-background: white;
   --main-font: hsl(230, 17%, 14%);
   --secondary-font: hsl(228, 12%, 44%);
@@ -136,12 +138,34 @@ header {
 }
 
 .header__slider>p {
+  color: var(--secondary-font);
+  font-weight: 400;
   margin-right: calc(var(--row-gap)/2);
+  order: 1;
+}
+
+.header__slider>label {
+  margin-right: calc(var(--row-gap)/2);
+  order: 2;
 }
 
 .header>p {
   color: var(--secondary-font);
   font-weight: bold;
+}
+
+.slider.round:hover {
+  background: linear-gradient(90grad, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+@media (min-width: 651px) {
+  .dark .switch:hover+p {
+    color: white;
+  }
+}
+
+body.dark span.slider:hover::before {
+  background-color: var(--card-background-highlight);
 }
 
 @media (max-width: 650px) {
@@ -191,6 +215,10 @@ header {
   flex: 1 0 var(--card-size);
   flex-direction: column;
   padding: var(--column-gap);
+}
+
+.dashboard-element:hover {
+  background: var(--card-background-highlight);
 }
 
 .facebook,
@@ -275,6 +303,10 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: var(--column-gap);
+}
+
+.overview--item:hover {
+  background: var(--card-background-highlight);
 }
 
 .overview__metric,
